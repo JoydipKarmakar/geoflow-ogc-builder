@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoFlow Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <h2>OGC Processes</h2>
+            <div class="node-item" draggable="true" data-type="buffer">Buffer Feature</div>
+            <div class="node-item" draggable="true" data-type="intersect">Intersect</div>
+            <div class="node-item" draggable="true" data-type="weather-route">Weather Route</div>
+        </div>
+
+        <div class="main-content">
+            <div class="toolbar">
+                <button id="runWorkflowBtn">Execute Workflow</button>
+            </div>
+            <div class="canvas" id="workflowCanvas">
+                <p class="placeholder-text">Drag nodes here to build your workflow</p>
+            </div>
+            <div id="outputConsole" class="console">
+                <p>> Waiting for execution...</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/builder.js"></script>
+</body>
+</html>

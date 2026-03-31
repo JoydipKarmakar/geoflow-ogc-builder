@@ -1,0 +1,30 @@
+* { box-sizing: border-box; font-family: sans-serif; }
+body { margin: 0; padding: 0; background-color: #f4f4f9; }
+
+.app-container { display: flex; height: 100vh; }
+
+.sidebar { width: 250px; background: #2c3e50; color: white; padding: 20px; }
+.node-item { background: #34495e; margin-bottom: 10px; padding: 10px; cursor: grab; border-radius: 4px;}
+
+.main-content { flex-grow: 1; display: flex; flex-direction: column; }
+.toolbar { background: #ecf0f1; padding: 15px; border-bottom: 1px solid #bdc3c7; }
+button { background: #27ae60; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold;}
+button:hover { background: #2ecc71; }
+
+.canvas { flex-grow: 1; position: relative; padding: 20px; }
+.placeholder-text { color: #95a5a6; text-align: center; margin-top: 20%; }
+
+.console { height: 150px; background: #1e1e1e; color: #00ff00; padding: 15px; font-family: monospace; overflow-y: auto;}
+
+/* Styling for nodes dropped onto the canvas */
+.canvas-node {
+    position: absolute; /* Allows placing it exactly where the mouse drops */
+    background: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 2px solid #2980b9;
+    cursor: move;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    user-select: none;
+}
